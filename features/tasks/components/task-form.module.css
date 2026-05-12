@@ -1,0 +1,206 @@
+.form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.field,
+.section {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.label,
+.sectionTitle {
+  color: var(--color-text-secondary, #828fa3);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.sectionTitle {
+  margin: 0;
+}
+
+.input,
+.textarea,
+.select,
+.rowInput {
+  width: 100%;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--color-text-primary, #ffffff);
+  font: inherit;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.select {
+  appearance: none;
+  background:
+    linear-gradient(45deg, transparent 50%, var(--color-text-secondary, #828fa3) 50%) calc(100% - 22px) calc(50% - 2px) / 8px 8px no-repeat,
+    linear-gradient(135deg, var(--color-text-secondary, #828fa3) 50%, transparent 50%) calc(100% - 16px) calc(50% - 2px) / 8px 8px no-repeat,
+    #242635;
+  padding-right: 3rem;
+}
+
+.select option {
+  background: #242635;
+  color: var(--color-text-primary, #ffffff);
+}
+
+.input,
+.select,
+.rowInput {
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+}
+
+.textarea {
+  min-height: 7rem;
+  padding: 0.875rem 1rem;
+  resize: vertical;
+}
+
+.input:hover,
+.textarea:hover,
+.select:hover,
+.rowInput:hover {
+  border-color: rgba(99, 95, 199, 0.85);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus,
+.rowInput:focus {
+  outline: none;
+  border-color: #635fc7;
+  box-shadow: 0 0 0 1px #635fc7;
+}
+
+.inputError {
+  border-color: #ea5555;
+}
+
+.helpText {
+  color: var(--color-text-secondary, #828fa3);
+  font-size: 0.75rem;
+}
+
+.errorText {
+  color: #ea5555;
+  font-size: 0.75rem;
+}
+
+.rows {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.button,
+.secondaryButton,
+.ghostButton,
+.iconButton {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.button:hover,
+.secondaryButton:hover,
+.ghostButton:hover,
+.iconButton:hover {
+  transform: translateY(-1px);
+}
+
+.button {
+  min-height: 3rem;
+  border-radius: 999px;
+  background: #635fc7;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.button:hover {
+  background: #7974db;
+}
+
+.secondaryButton {
+  min-height: 2.5rem;
+  padding: 0.625rem 1rem;
+  border-radius: 999px;
+  background: rgba(99, 95, 199, 0.12);
+  color: #635fc7;
+  font-weight: 700;
+}
+
+.secondaryButton:hover {
+  background: rgba(99, 95, 199, 0.2);
+}
+
+.ghostButton {
+  min-height: 2.5rem;
+  padding: 0 0.25rem;
+  background: transparent;
+  color: #ea5555;
+  font-weight: 700;
+}
+
+.ghostButton:hover {
+  color: #ff9898;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: rgba(130, 143, 163, 0.1);
+  color: var(--color-text-secondary, #828fa3);
+}
+
+.iconButton:hover {
+  background: rgba(130, 143, 163, 0.18);
+  color: var(--color-text-primary, #ffffff);
+}
+
+.actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.rootError {
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
+  background: rgba(234, 85, 85, 0.08);
+  color: #ffb3b3;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
