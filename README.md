@@ -13,6 +13,13 @@ A full-stack kanban-style task management app built for the Aragon frontend/back
 
 ## Quick start
 
+env variables
+```
+DATABASE_URL="postgres db url"
+NODE_ENV="development"
+LOG_LEVEL="debug"
+```
+
 1. Copy `.env.example` to `.env`.
 2. Start Postgres with `docker compose up -d`.
 3. Install dependencies with `pnpm install`.
